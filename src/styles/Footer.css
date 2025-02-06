@@ -1,0 +1,56 @@
+footer {
+  background-color: #000; /* Dark background */
+  text-align: center; /* Center text */
+  color: #fff; /* White text */
+  padding: 40px 20px; /* Add padding */
+  letter-spacing: 5px; /* Spacing between letters */
+  font-size: 1.2rem; /* Font size */
+  position: relative; /* Position for pseudo-element */
+  overflow: hidden; /* Hide overflow for animation */
+}
+
+footer::before {
+  content: ''; /* Pseudo-element for animation */
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Align to the top */
+  left: -100%; /* Start from the left */
+  width: 100%; /* Full width */
+  height: 2px; /* Height of the line */
+  background: linear-gradient(90deg, transparent, #ffcc00, transparent); /* Gradient line */
+  animation: slide 3s linear infinite; /* Animation for the line */
+}
+
+@keyframes slide {
+  0% {
+    left: -100%; /* Start from the left */
+  }
+  100% {
+    left: 100%; /* Move to the right */
+  }
+}
+
+footer a {
+  color: #ffcc00; /* Yellow color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+footer a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+footer .social-icons {
+  margin-top: 20px; /* Space above social icons */
+}
+
+footer .social-icons a {
+  margin: 0 10px; /* Space between icons */
+  font-size: 1.5rem; /* Icon size */
+  color: #fff; /* White color for icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+footer .social-icons a:hover {
+  color: #ffcc00; /* Change color on hover */
+  transform: scale(1.2); /* Scale up on hover */
+}

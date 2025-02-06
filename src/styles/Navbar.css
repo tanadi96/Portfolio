@@ -1,0 +1,137 @@
+nav {
+  background-color: #000000; /* Dark background */
+  color: #fff; /* White text */
+  position: sticky; /* Sticky navbar */
+  top: 0; /* Stick to the top */
+  z-index: 100; /* Ensure it stays on top */
+  text-transform: uppercase; /* Uppercase text */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent on scroll */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow on scroll */
+}
+
+ul li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Default link color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+ul li a:hover {
+  color: rgb(255, 204, 0); /* Change to yellow on hover */
+  transform: scale(1.1); /* Slight scaling on hover */
+}
+
+nav > .wrapper {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logo and menu */
+  align-items: center; /* Center items vertically */
+  padding: 15px 30px; /* Padding for the navbar */
+}
+
+.logo {
+  display: flex; /* Flexbox for logo */
+  align-items: center; /* Center logo vertically */
+}
+
+.logo > a {
+  color: #fff; /* White color for logo */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.5rem; /* Logo font size */
+  font-weight: 900; /* Bold logo */
+  letter-spacing: 8px; /* Spacing between letters */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.logo > a:hover {
+  color: rgb(255, 204, 0); /* Change color on hover */
+}
+
+.menu {
+  width: 35%; /* Width of the menu */
+}
+
+.menu > ul {
+  display: flex; /* Flexbox for menu items */
+  list-style-type: none; /* Remove bullet points */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  justify-content: space-between; /* Space between items */
+  gap: 20px; /* Space between items */
+}
+
+.menu li a {
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Font size for menu items */
+  position: relative; /* Position for pseudo-element */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.menu li a::after {
+  content: ''; /* Pseudo-element for underline */
+  position: absolute; /* Position it absolutely */
+  bottom: -4px; /* Position below the text */
+  left: 0; /* Align to the left */
+  width: 0; /* Initial width */
+  height: 2px; /* Height of the underline */
+  background-color: yellow; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.menu li a:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+nav > .wrapper > button {
+  cursor: pointer; /* Pointer cursor */
+  display: none; /* Hide button by default */
+  position: absolute; /* Position it absolutely */
+  right: 10px; /* Align to the right */
+  top: 10px; /* Align to the top */
+  border: 0; /* No border */
+  background-color: transparent; /* Transparent background */
+  padding: 0; /* No padding */
+}
+
+nav > .wrapper > button > svg {
+  color: #fff; /* White color for the icon */
+  font-size: 50px; /* Icon size */
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu > ul {
+    display: none; /* Hide menu by default */
+  }
+
+  .menu.tampil > ul {
+    display: flex; /* Show menu when active */
+    flex-direction: column; /* Stack items vertically */
+    background-color: #000; /* Background color for mobile menu */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position */
+    top: 70px; /* Position below the navbar */
+    left: 0; /* Align to the left */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  }
+
+  .menu > ul > li {
+    text-align: left; /* Align text to the left */
+    cursor: pointer; /* Pointer cursor */
+  }
+
+  .menu > ul > li > a {
+    display: inline-block; /* Inline block for links */
+    padding: 15px 20px; /* Padding for links */
+    width: 100%; /* Full width */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+  }
+
+  .menu > ul > li > a:hover {
+    background-color: #222831; /* Background color on hover */
+  }
+}

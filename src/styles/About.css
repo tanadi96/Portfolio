@@ -1,0 +1,95 @@
+#about {
+  background-color: #eaedef; /* Soft background color */
+  position: relative;
+  font-size: 1.2rem;
+  padding: 60px 0; /* Add padding for better spacing */
+}
+
+#about > .wrapper {
+  margin: auto;
+  width: 50%;
+  max-width: 800px; /* Limit the width for better readability */
+}
+
+#about > .wrapper > h3 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  color: #333;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-in-out; /* Add animation */
+}
+
+#about > .wrapper > p {
+  text-align: center;
+  line-height: 1.8; /* Improve readability */
+  animation: fadeInUp 1s ease-in-out; /* Add animation */
+}
+
+#about > .wrapper > h4 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+  color: #333;
+  animation: fadeInDown 1s ease-in-out; /* Add animation */
+}
+
+.skills {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Add spacing between icons */
+  animation: fadeInUp 1s ease-in-out; /* Add animation */
+}
+
+.skills > svg {
+  color: #74797e;
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.skills > svg:hover {
+  color: #000;
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #about > .wrapper {
+    width: 80%;
+  }
+
+  .skills > svg {
+    width: 40px; /* Smaller icons on smaller screens */
+  }
+}
