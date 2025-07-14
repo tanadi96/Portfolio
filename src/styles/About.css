@@ -26,7 +26,40 @@
 #about > .wrapper > p {
   text-align: center;
   line-height: 1.8; /* Improve readability */
+  margin-bottom: 20px;
   animation: fadeInUp 1s ease-in-out; /* Add animation */
+}
+
+.cv-download {
+  text-align: center;
+  margin: 30px 0;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  border: 2px solid transparent;
+}
+
+.cv-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.cv-button:active {
+  transform: translateY(0);
 }
 
 #about > .wrapper > h4 {
@@ -42,23 +75,29 @@
 
 .skills {
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Add spacing between icons */
-  animation: fadeInUp 1s ease-in-out; /* Add animation */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .skills > svg {
   color: #74797e;
   width: 50px;
-  height: auto;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+  height: 50px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .skills > svg:hover {
-  color: #000;
-  transform: scale(1.2); /* Scale up on hover */
+  color: #667eea;
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.3));
 }
 
 /* Keyframes for animations */
@@ -89,7 +128,29 @@
     width: 80%;
   }
 
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 20px;
+    padding: 15px;
+  }
+
   .skills > svg {
-    width: 40px; /* Smaller icons on smaller screens */
+    width: 40px;
+    height: 40px;
+  }
+
+  .cv-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  #about > .wrapper > h3 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+
+  #about > .wrapper > h4 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
   }
 }

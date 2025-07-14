@@ -21,6 +21,27 @@ function Experience() {
                 <VerticalTimeline>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
+                        date="March 2025 - Present"
+                        iconStyle={{ background: '#222831', color: '#fff' }}
+                        icon={<FaReact />}
+                    >
+                        <h3 className="vertical-timeline-element-title">Full Stack Developer</h3>
+                        <h4 className="vertical-timeline-element-subtitle">PT. Anak Muda Digital - Jakarta, Indonesia</h4>
+                        <p>
+                            • Develop and maintain web and mobile applications using modern technologies such as React, Next.js, Node.js, Express, PostgreSQL, and MongoDB.
+                        </p>
+                        <p>
+                            • Involved in the full software development lifecycle including feature planning implementation, testing, and deployment.
+                        </p>
+                        <p>
+                            • Collaborate with UI/UX designers and QA engineers to deliver high-quality products and seamless user experiences.
+                        </p>
+                        <p>
+                            • Participate in code reviews, refactoring, and performance optimization to ensure clean and maintainable codebases.
+                        </p>
+                    </VerticalTimelineElement>
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
                         date="July 2024 - November 2024"
                         iconStyle={{ background: '#222831', color: '#fff' }}
                         icon={<RiNextjsFill />}

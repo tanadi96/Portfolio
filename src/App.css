@@ -1,6 +1,6 @@
 /* Global */
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap");
 
 html,
 body {
@@ -9,8 +9,14 @@ body {
   font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
-  background-color: #dedede;
+  background-color: #f8f9fa;
+  line-height: 1.6;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 .wrapper {
   width: 1024px;
   margin: auto;
@@ -18,7 +24,7 @@ body {
 }
 
 section {
-  padding: 50px 0px 50px 0px;
+  padding: 60px 0px 60px 0px;
 }
 
 .wrapper > h3,
@@ -31,21 +37,61 @@ section {
   color: #222831;
   letter-spacing: 5px;
   text-transform: uppercase;
-  border-bottom: 5px solid #cccccc;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
+
 .wrapper > h3::after,
 .wrapper > h1::after {
   content: "";
   display: block;
-  border-bottom: 5px solid #aa392d;
-  width: 25%;
-  position: relative;
-  bottom: -5px; /* your padding + border-width */
-  margin: auto;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Smooth scrolling for hash links */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 1000px) {
   .wrapper {
-    width: 80%;
+    width: 90%;
+    padding: 15px 0px 15px 0px;
+  }
+
+  .wrapper > h3,
+  .wrapper > h1 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+
+  section {
+    padding: 40px 0px 40px 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper > h3,
+  .wrapper > h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
   }
 }
